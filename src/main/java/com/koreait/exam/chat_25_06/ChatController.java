@@ -28,5 +28,15 @@ public class ChatController {
         );
     }
 
+    @GetMapping("/messages")
+    @ResponseBody
+    public RsData<List<ChatMessage>> getMessages() {
+        return new RsData<>(
+                "S-1",
+                "성공",
+                chatMessages
+        );
+    }
+
 
 }
