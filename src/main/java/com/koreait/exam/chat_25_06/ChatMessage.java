@@ -16,11 +16,12 @@ public class ChatMessage {
     private String content;
 
     public ChatMessage(String authorName, String content) {
-        this(ChatMessageId.getNextId(), LocalDateTime.now(), authorName, content);
+        this(ChatMessageIdGenerator.getNextId(), LocalDateTime.now(), authorName, content);
     }
+
 }
 
-class ChatMessageId {
+class ChatMessageIdGenerator {
     private static long id = 0;
 
     public static long getNextId() {

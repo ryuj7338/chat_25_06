@@ -8,7 +8,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class RsData<T> {
-    private String resultcode;
+    private String resultCode;
     private String msg;
     private T data;
+
 }
